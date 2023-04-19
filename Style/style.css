@@ -1,6 +1,6 @@
 body {
     /* background-image: linear-gradient(180deg, rgba(3, 6, 17, 0) 0%, #030611 8.71%, #030611 100%); */
-    background-color: #0E0F17;
+    background-color: #030611;
     color: white !important;
     /* padding: 0px 135px; */
     font-family: 'Quicksand', 'Advent Pro';
@@ -64,6 +64,20 @@ html {
     Line-height: 19px;
 }
 
+.nav-link {
+    color: #FFFFFF !important;
+}
+
+.nav-link:hover {
+    color: orange !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        padding: 0px 10px;
+    }
+}
+
 @media only screen and (min-device-width: 600px) and (max-device-width: 778px) {
     .navbar {
         padding: 0px 50px;
@@ -112,6 +126,8 @@ html {
     position: absolute;
     background: rgb(3, 6, 17);
     background: linear-gradient(360deg, rgba(3, 6, 17, 1) 0%, rgba(3, 6, 17, 1) 13%, rgba(3, 6, 17, 0) 23%, rgba(3, 6, 17, 0) 90%);
+
+
     /* background-image: linear-gradient(red, yellow); */
     padding: 20% 7.5%;
     top: 0%;
@@ -145,7 +161,8 @@ html {
 
 @media only screen and (max-width: 600px) {
     .bannerContainer {
-        padding-bottom: 17% !important;
+        padding: 70% 10px;
+        position: relative;
     }
 
     .BannerHeading {
@@ -155,9 +172,15 @@ html {
     }
 
     .bannerContent {
-        margin-top: 5%;
+        margin-top: 0%;
         font-size: 18px;
         line-height: 32px;
+        padding: 5% 10px;
+        top: 0%;
+        left: 0%;
+        bottom: 0% !important;
+        width: 100%;
+        height: 100%;
     }
 
     .primaryBtn {
@@ -254,7 +277,7 @@ html {
     }
 }
 
-/*--------------------------------------------------                                                                                                                       What we do Section
+/*--------------------------------------------------                                                                                   What we do Section
 ----------------------------------------------------*/
 .servicesSection {
     /* background-color: #107e4c; */
@@ -310,18 +333,31 @@ html {
     justify-content: center;
 }
 
+.outSide {
+    width: 500px !important;
+    height: 314px !important;
+    /* background-color: orange; */
+    /* border: 10px solid orange; */
+    background-color: orange;
+    border-radius: 12px;
+    -webkit-clip-path: polygon(100% 7%, 100% 23%, 100% 100%, 0 100%, 0 0, 69% 0, 80% 7%);
+    clip-path: polygon(100% 7%, 100% 23%, 100% 100%, 0 100%, 0 0, 69% 0, 80% 7%);
+}
+
 .servicesCard {
-    background-color: rgba(37, 34, 37, 0.1);
-    /* background-color: white; */
+    /* background-color: rgba(37, 34, 37, 0.1); */
+    background-color: #0C0D16;
     border-radius: 12px;
     color: white;
     width: 500px !important;
     height: 314px !important;
     padding: 46px 38px 46px 28px;
-    border: 1px solid orange !important;
-    clip-path: polygon(66% 0, 78% 10%, 100% 10%, 100% 70%, 100% 100%, 0 100%, 0 0, 47% 0);
+    border: 3px solid orange !important;
+    -webkit-clip-path: polygon(100% 8%, 100% 23%, 100% 100%, 0 100%, 0 0, 67% 0, 80% 8%);
+    clip-path: polygon(100% 8%, 100% 23%, 100% 100%, 0 100%, 0 0, 67% 0, 80% 8%);
 
 }
+
 
 .servicesCard:hover {
     /* border: 1px solid #1CB26E; */
@@ -344,7 +380,9 @@ html {
     line-height: 24px;
 }
 
-
+.servicesCard>div>img {
+    padding-top: 3%;
+}
 
 .BillList {
     font-family: Gilroy;
@@ -357,16 +395,25 @@ html {
 @media only screen and (max-width: 600px) {
     .servicesHeadingSection {
         flex-direction: column;
+        padding-top: 0px;
     }
 
     .servicesSection {
-        padding: 50px 10px;
+        padding: 0px 10px;
     }
 
     .servicesCardContainer {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 40px;
+    }
+
+    .outSide {
+        width: 100% !important;
+        height: 314px !important;
+        background-color: orange;
+        border-radius: 32px !important;
+        clip-path: polygon(79% 7%, 98% 7%, 98% 50%, 98% 100%, 0 100%, 0 0, 68% 0);
     }
 
     .servicesCard {
@@ -376,19 +423,19 @@ html {
     }
 
     .servicesHeading {
-        font-size: 42px;
-        line-height: 48px;
-        margin-top: 54px;
+        margin-top: 0px;
+        width: 100%;
     }
 
     .servicesSubHeading {
-        margin-bottom: 40px;
+        margin-bottom: 10px;
+        width: 100%;
     }
 }
 
 @media only screen and (min-device-width: 600px) and (max-device-width: 778px) {
     .servicesSection {
-        padding: 70px 50px;
+        padding: 20px 50px;
     }
 
     .servicesCardContainer {
@@ -400,13 +447,29 @@ html {
     .servicesHeading {
         font-size: 36px;
         line-height: 42px;
+    }
 
+    .outSide {
+        width: 95% !important;
     }
 
     .servicesCard {
-        width: 98% !important;
+        width: 100% !important;
         height: 100% !important;
         padding: 15px 20px;
+    }
+
+    .servicesHeadingSection {
+        padding-top: 0px;
+    }
+
+    .servicesHeading {
+        font-size: 32px;
+    }
+
+    .servicesSubHeading {
+        font-size: 18px;
+        line-height: 24px;
     }
 }
 
@@ -415,16 +478,29 @@ html {
         padding: 80px 80px;
     }
 
-    /* .servicesCardContainer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-  */
+    .outSide {
+        width: 100% !important;
+        height: 98% !important;
+        clip-path: polygon(79% 7%, 98% 7%, 98% 50%, 98% 100%, 0 100%, 0 0, 68% 0);
+        border-radius: 30px;
+    }
+
+    .servicesHeadingSection {
+        padding-top: 0px;
+    }
 
     .servicesCard {
         width: 98% !important;
         height: 100% !important;
         padding: 15px 30px;
+    }
+
+    .servicesCard>h4 {
+        font-size: 21px;
+    }
+
+    .cardTitle>p {
+        font-size: 16px;
     }
 }
 
@@ -435,12 +511,18 @@ html {
 
     .servicesCardContainer {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .outSide {
+        width: 88% !important;
+        height: 100% !important;
+        border-radius: 30px;
     }
 
     .servicesCard {
-        width: 98% !important;
+        width: 100% !important;
         height: 100% !important;
         padding: 15px 30px;
     }
@@ -453,23 +535,28 @@ html {
 
 .cirleServiceContainer {
     padding: 0px 135px;
-    background-image: url("../Images/img/Group 115.svg");
+    background-image: url("../Images/img/planet-Bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    /* width: 99vw; */
+    background-position: 25% 13%;
+
+    position: relative;
 }
 
 .cardMainContainer {
     margin-top: 10%;
+position: relative;
+z-index: 20;
 }
 
 .circleServiceCard {
     border-radius: 12px;
-    background-color: rgba(3, 6, 17, 1);
+    background-color: #030611;
     padding: 37px 30px;
     border-top: 1px solid orange;
     Width: 327px;
-    Height: 213px;
+    Height: 179px;
+
 }
 
 .fackCard {
@@ -479,11 +566,12 @@ html {
 
 .astronaut {
     padding-top: 15%;
-    padding-bottom: 15%;
+    padding-bottom: 12%;
 }
 
 .circleServiceCard>img {
     color: #F4901A !important;
+
 }
 
 .circleServiceCard>h5 {
@@ -501,62 +589,277 @@ html {
     Line-height: 26px;
 }
 
+.lastCol {
+    padding-left: 10%;
+}
+
+.astronaut {
+    padding-top: 65%;
+    padding-bottom: 55%;
+}
+
+.first1 {
+    padding-top: 30%;
+}
+
+.first2 {
+    padding-top: 30%;
+}
+
+.third1 {
+    padding-top: 40%;
+}
+
+.third2 {
+    padding-top: 40%;
+}
+
+.borderLayout {
+    border: 3px dashed rgba(217, 217, 217, 0.3);
+    border-radius: 100%;
+    height: 75%;
+    width: 73%;
+    top: 21%;
+    left: 12%;
+    right: 10%;
+    position: absolute;
+   z-index: 1;
+}
+
+.middleSection {
+    padding-left: 4%;
+}
+
+@media only screen and (max-width: 600px) {
+    .cirleServiceContainer {
+        padding: 0px 10px;
+        /* background-position: 25% 13%; */
+    }
+
+    .lastCol {
+        padding-left: 0%;
+        row-gap: 10%;
+    }
+
+    .middle1 {
+        padding-bottom: 10%;
+        padding-top: 10%;
+    }
+
+    .middle3 {
+        padding-bottom: 10%;
+    }
+
+    .astronaut {
+        display: none;
+    }
+
+    .fackCard {
+        display: none;
+    }
+
+    .borderLayout {
+        display: none;
+    }
+
+    .first1 {
+        padding: 0%;
+    }
+
+    .first2 {
+        padding-top: 0%;
+    }
+
+    .third1 {
+        padding-top: 0%;
+    }
+
+    .third2 {
+        padding-top: 0%;
+    }
+
+
+}
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 778px) {
+    .cirleServiceContainer {
+        padding: 0px 50px;
+        /* background-position: 25% 13%; */
+    }
+
+    .circleServiceCard {
+        Width: 100% !important;
+    }
+
+    .lastCol {
+        padding-left: 0%;
+        display: flex !important;
+        padding-top: 10%;
+        column-gap: 15%;
+    }
+
+    .astronaut {
+        display: none;
+    }
+
+    .fackCard {
+        display: none;
+    }
+
+    .borderLayout {
+        display: none;
+    }
+
+    .first1 {
+        padding-top: 0%;
+    }
+
+    .first2 {
+        padding-top: 0%;
+    }
+
+    .middle3 {
+        padding-top: 15%;
+    }
+
+    .third1 {
+        padding-top: 0%;
+    }
+
+    .third2 {
+        padding-top: 0%;
+
+    }
+}
 @media only screen and (min-device-width: 778px) and (max-device-width: 1034px) {
 
     .cirleServiceContainer {
         padding: 0px 50px;
-        height: 135vh;
-        width: 99vw;
+        background-position: 25% 13%;
     }
 
     .circleServiceCard {
-        Width: 32%;
-        Height: 15% !important;
+        Width: 98% !important;
+        Height: 65% !important;
         padding: 20px 20px;
     }
 
+    .astronaut {
+        padding-top: 40% !important;
+        padding-bottom: 40% !important;
+    }
+
+    .astronaut img {
+        width: 80%;
+    }
+
     .circleServiceCard>h5 {
-        Font-size: 21px;
+        Font-size: 18px;
         Line-height: 31px;
         margin-top: 10px;
 
     }
 
     .circleServiceCard>p {
-        Font-size: 18px;
+        Font-size: 14px;
         Line-height: 21px;
     }
 
-    .fcard {
-        margin-top: 0%;
-        margin-bottom: 8%;
+    .astronaut {
+        padding-top: 13%;
+        padding-bottom: 13%;
+
     }
 
-    .firstSquare {
-        margin-bottom: 5%;
+    .first1 {
+        padding-top: 0%;
     }
 
-    .lcard {
-        margin-top: 8%;
+    .first2 {
+        padding-top: 10%;
     }
+
+    .third1 {
+        padding-top: 0%;
+    }
+
+    .third2 {
+        padding-top: 10%;
+    }
+
+    .lastCol {
+        padding-left: 2%;
+    }
+
+    .middleSection {
+        padding: 0% auto;
+    }
+
+    .borderLayout {
+        height: 73%;
+        width: 75%;
+
+        top: 21%;
+        left: 12%;
+        right: 10%;
+
+    }
+
 }
 
 @media only screen and (min-device-width: 1035px) and (max-device-width: 1450px) {
     .cirleServiceContainer {
         padding: 0px 80px;
+        background-position: 25% 13% !important;
     }
 
-    .fcard {
-        margin-top: 10%;
-        margin-bottom: 14%;
+    .circleServiceCard {
+        Width: 90% !important;
+        Height: 65% !important;
+        padding: 20px 20px;
     }
 
-    .firstSquare {
-        margin-bottom: 12%;
+    .astronaut {
+        padding-top: 60%;
+        padding-bottom: 55%;
+
     }
 
-    .lcard {
-        margin-top: 10%;
+    .astronaut img {
+        width: 80%;
+    }
+
+    .first1 {
+        padding-top: 20%;
+    }
+
+    .first2 {
+        padding-top: 20%;
+    }
+
+    .third1 {
+        padding-top: 20%;
+    }
+
+    .third2 {
+        padding-top: 20%;
+    }
+
+    .lastCol {
+        padding-left: 2%;
+    }
+
+    .middleSection {
+        padding: 0% auto;
+    }
+
+    .borderLayout {
+        height: 72%;
+        width: 78%;
+
+        top: 21%;
+        left: 12%;
+        right: 10%;
     }
 
 }
@@ -576,7 +879,6 @@ html {
 .portfolioCardContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
 }
 
 .portfoliCard>img {
@@ -596,11 +898,11 @@ html {
     margin-top: 20px;
 }
 
-/*  */
+
 
 .portfoliCard {
     position: relative;
-    width: 80%;
+    width: 86%;
     height: 88%;
 }
 
@@ -651,8 +953,65 @@ html {
     }
 
     .portfoliCard {
+        width: 98%;
+        height: 84%;
+    }
+
+    .portfolioImg {
         width: 100%;
-        height: 80%;
+        height: 100% !important;
+    }
+}
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 778px) {
+    .portfolioContainer {
+        padding: 0px 50px;
+    }
+
+    .portfoliCard {
+        position: relative;
+        width: 84% !important;
+        height: 74%;
+    }
+
+    .portfolioImg {
+        width: 100%;
+        height: 100% !important;
+    }
+
+}
+
+@media only screen and (min-device-width: 778px) and (max-device-width: 1034px) {
+    .portfolioContainer {
+        padding: 0px 80px;
+    }
+
+    .portfoliCard {
+        position: relative;
+        width: 86%;
+        height: 79%;
+    }
+
+    .portfolioImg {
+        width: 100%;
+        height: auto !important;
+    }
+}
+
+@media only screen and (min-device-width: 1034px) and (max-device-width: 1450px) {
+    .portfolioContainer {
+        padding: 0px 110px;
+    }
+
+    .portfoliCard {
+        position: relative;
+        width: 86%;
+        height: 83.3%;
+    }
+
+    .portfolioImg {
+        width: 100%;
+        height: auto !important;
     }
 }
 
@@ -670,19 +1029,27 @@ html {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    padding-bottom: 4%;
+    padding-bottom: 116px;
+}
+
+.priceUpperCard {
+    width: 506px;
+    height: 592px;
+    background-color: orange;
+    clip-path: polygon(74% 0, 81% 7%, 100% 7%, 100% 100%, 0 100%, 0 0, 25% 0);
+    border-radius: 12px;
 }
 
 .priceCard {
     /* width: 370px;
     height: 566px; */
-    width: 500px;
-    height: 586px;
+    width: 504px;
+    height: 590px;
     background-color: #030611;
-    /* padding: 45px 12px; */
     padding: 65px 24px;
-    clip-path: polygon(66% 0, 78% 10%, 100% 10%, 100% 70%, 100% 100%, 0 100%, 0 0, 47% 0);
+    clip-path: polygon(73% 0, 81% 8%, 100% 8%, 100% 100%, 0 100%, 0 0, 25% 0);
     border: 1px solid orange;
+    border-radius: 12px;
 }
 
 .priceBtn {
@@ -750,8 +1117,16 @@ html {
         gap: 30px;
     }
 
+    .priceUpperCard {
+        width: 100%;
+        height: 100%;
+        background-color: orange;
+        /* -webkit-clip-path: polygon(70% 0, 78% 8%, 100% 8%, 100% 100%, 0 100%, 0 0, 51% 0);
+        clip-path: polygon(70% 0, 78% 8%, 100% 8%, 100% 100%, 0 100%, 0 0, 51% 0); */
+    }
+
     .priceCard {
-        width: 95%;
+        width: 100%;
         height: 100%;
         border: 1px solid orange;
         padding: 10px 10px;
@@ -775,8 +1150,16 @@ html {
         gap: 30px;
     }
 
+    .priceUpperCard {
+        width: 100%;
+        height: 100%;
+        background-color: orange;
+        /* -webkit-clip-path: polygon(70% 0, 78% 8%, 100% 8%, 100% 100%, 0 100%, 0 0, 51% 0);
+        clip-path: polygon(70% 0, 78% 8%, 100% 8%, 100% 100%, 0 100%, 0 0, 51% 0); */
+    }
+
     .priceCard {
-        width: 95%;
+        width: 100%;
         height: 100%;
         border: 1px solid orange;
         padding: 10px 10px;
@@ -798,8 +1181,16 @@ html {
         gap: 30px;
     }
 
+    .priceUpperCard {
+        width: 100%;
+        height: 100%;
+        background-color: orange;
+        /* -webkit-clip-path: polygon(69% 0, 78% 9%, 100% 9%, 100% 100%, 0 100%, 0 0, 51% 0);
+    clip-path: polygon(69% 0, 78% 9%, 100% 9%, 100% 100%, 0 100%, 0 0, 51% 0); */
+    }
+
     .priceCard {
-        width: 95%;
+        width: 100%;
         height: 100%;
         border: 1px solid orange;
         padding: 10px 10px;
@@ -814,6 +1205,19 @@ html {
 
     .priceCard {
         width: 95%;
+        height: 100%;
+        border: 1px solid orange;
+        padding: 10px 10px;
+    }
+
+    .priceUpperCard {
+        width: 100%;
+        height: 100%;
+        background-color: orange;
+    }
+
+    .priceCard {
+        width: 100%;
         height: 100%;
         border: 1px solid orange;
         padding: 10px 10px;
@@ -900,13 +1304,18 @@ html {
         padding: 50px 50px !important;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 2rem;
+        column-gap: 1rem;
         justify-content: center;
         align-items: center;
     }
 
+    .aboutContent {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
     .aboutImg {
-        width: 90%;
+        width: 98%;
     }
 
     .aboutHeading {
@@ -986,7 +1395,7 @@ html {
 .footerLinks {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 15%;
+    column-gap: 3%;
 }
 
 .footerLeftSection>h1 {
@@ -1036,6 +1445,18 @@ html {
     padding-left: 25%;
 }
 
+.socialLogo {
+    margin-top: 14px;
+    border: 2px solid transparent;
+}
+
+/* .socialLogo:hover {
+    background-color: #F4901A;
+    color: white;
+    border-radius: 50%;
+    border: 2px solid white;
+} */
+
 @media only screen and (max-width: 600px) {
     .LinkContainer {
         display: grid;
@@ -1045,14 +1466,32 @@ html {
 
     .footerLinks {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         row-gap: 5%;
         margin-top: 5%;
+        margin-bottom: 10%;
     }
 
     .footerContainer {
         /* background-image: linear-gradient(to right, #0f1511, #15282b); */
         padding: 0px 10px !important;
+    }
+
+    .links>p {
+        padding-left: 0%;
+    }
+
+    .links>ul {
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .socialLogo {
+        margin-top: 5px;
+    }
+
+    .socialLogo:hover {
+        display: none;
     }
 }
 
@@ -1066,17 +1505,26 @@ html {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 5%;
     }
+
+    .socialLogo {
+        margin-top: 5px;
+    }
+
+    .socialLogo:hover {
+        display: none;
+    }
 }
 
 @media only screen and (min-device-width: 778px) and (max-device-width: 1034px) {
     .footerContainer {
-        padding: 0px 80px !important;
+        padding: 0px 50px !important;
     }
 
     .footerLinks {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         column-gap: 5%;
+            padding-right: 50px !important;
     }
 }
 
@@ -1088,6 +1536,6 @@ html {
     .footerLinks {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        column-gap: 10%;
+        column-gap: 5% !important;
     }
 }
