@@ -737,6 +737,9 @@ html {
   .circleServiceCard {
     width: 100% !important;
   }
+  .circleServiceCard > h5 {
+    white-space: nowrap;
+  }
 
   .lastCol {
     padding-left: 4%;
