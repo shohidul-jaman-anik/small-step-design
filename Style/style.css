@@ -733,7 +733,10 @@ html {
     padding: 0px 50px;
     /* background-position: 25% 13%; */
   }
-
+  .cardMainContainer {
+    margin-bottom: 5%;
+  }
+  
   .circleServiceCard {
     width: 100% !important;
   }
@@ -785,6 +788,10 @@ html {
     padding: 0px 50px;
     background-position: 25% 13%;
   }
+  .cardMainContainer {
+    margin-bottom: 5%;
+  }
+  
 
   .circleServiceCard {
     width: 98% !important;
