@@ -401,7 +401,6 @@ html {
     35% 0,
     53% 0
   );
-
 }
 
 .servicesCard:hover {
@@ -612,7 +611,6 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 25% 60%; */
-  
 }
 
 .circleServiceCard > img {
@@ -684,7 +682,14 @@ html {
     width: 98%;
     height: 100%;
   }
-
+ .sHeading{
+  font-size: 32px;
+  line-height: 40px;
+ }
+ .sContent{
+  font-size: 18px;
+  line-height: 28px;
+ }
   .lastCol {
     padding-left: 3%;
     row-gap: 10%;
@@ -716,7 +721,7 @@ html {
   }
 
   .first2 {
-    padding-top: 0%;
+    padding-top: 0% !important;
   }
 
   .third1 {
@@ -736,7 +741,7 @@ html {
   .cardMainContainer {
     margin-bottom: 5%;
   }
-  
+
   .circleServiceCard {
     width: 100% !important;
   }
@@ -791,7 +796,6 @@ html {
   .cardMainContainer {
     margin-bottom: 5%;
   }
-  
 
   .circleServiceCard {
     width: 98% !important;
@@ -802,14 +806,10 @@ html {
   .astronaut {
     padding-top: 40% !important;
     padding-bottom: 40% !important;
-
-  
   }
 
   .astronaut img {
     width: 80%;
-
-   
   }
 
   .circleServiceCard > h5 {
@@ -861,6 +861,7 @@ html {
     right: 10%;
   }
 }
+
 
 @media only screen and (min-device-width: 1035px) and (max-device-width: 1450px) {
   .cirleServiceContainer {
@@ -1054,7 +1055,6 @@ html {
     position: relative;
     width: 86%;
     height: 83.3%;
-   
   }
 
   .portfolioImg {
@@ -1155,11 +1155,10 @@ html {
   font-size: 48px;
   text-align: center;
 }
-.tiny{
-    font-family: "Advent Pro";
-    font-style: Bold;
-    font-size: 24px !important;
-
+.tiny {
+  font-family: "Advent Pro";
+  font-style: Bold;
+  font-size: 24px !important;
 }
 .serviceList {
   display: flex;
@@ -1301,6 +1300,32 @@ html {
     width: 98vw; */
 }
 
+.aboutImgSection {
+  /* position: relative; */
+  height: 550px;
+  /* background-color: RED; */
+}
+.aboutImg {
+  position: relative;
+  top: 0%;
+  bottom: 0%;
+  animation-name: aboutAstronaut;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+@keyframes aboutAstronaut {
+  from {
+    top: 5%;
+  }
+
+  to {
+    bottom: 0%;
+  }
+}
+
 .aboutHeading {
   font-family: "Advent Pro";
   font-weight: bold;
@@ -1341,9 +1366,12 @@ html {
     grid-template-columns: repeat(1, 1fr);
     justify-content: center;
   }
-
+  .aboutImgSection{
+    height: 400px;
+  }
   .aboutImg {
     width: 90%;
+    height: 100%;
     margin: 0% auto;
   }
 
@@ -1366,7 +1394,9 @@ html {
     justify-content: center;
     align-items: center;
   }
-
+  .aboutImgSection{
+    height: 400px;
+  }
   .aboutContent {
     font-size: 18px;
     line-height: 24px;
@@ -1374,6 +1404,7 @@ html {
 
   .aboutImg {
     width: 98%;
+    height: 100%;
   }
 
   .aboutHeading {
@@ -1398,9 +1429,12 @@ html {
     justify-content: center;
     align-items: center;
   }
-
+  .aboutImgSection{
+    height: 600px;
+  }
   .aboutImg {
     width: 95%;
+    height: 98%;
   }
 
   .aboutHeading {
@@ -1602,8 +1636,6 @@ html {
     margin: 10px 0px;
     border-radius: 50%;
   }
-
-
 }
 
 @media only screen and (min-device-width: 600px) and (max-device-width: 778px) {
